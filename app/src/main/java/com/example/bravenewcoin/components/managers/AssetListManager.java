@@ -1,4 +1,7 @@
-package com.example.bravenewcoin.components;
+package com.example.bravenewcoin.components.managers;
+
+import com.example.bravenewcoin.components.Asset;
+import com.example.bravenewcoin.components.AssetList;
 
 public class AssetListManager {
 

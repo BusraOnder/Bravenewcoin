@@ -1,4 +1,7 @@
-package com.example.bravenewcoin.components;
+package com.example.bravenewcoin.components.managers;
+
+import com.example.bravenewcoin.components.Market;
+import com.example.bravenewcoin.components.MarketList;
 
 import java.util.List;
 

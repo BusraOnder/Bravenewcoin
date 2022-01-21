@@ -12,6 +12,7 @@ import android.widget.TextView;
 
 import com.example.bravenewcoin.MainActivity;
 import com.example.bravenewcoin.R;
+import com.example.bravenewcoin.components.managers.MainManager;
 
 public class MyView extends RelativeLayout implements View.OnClickListener{
 

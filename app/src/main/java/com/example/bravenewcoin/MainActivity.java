@@ -5,14 +5,13 @@ import androidx.appcompat.app.AppCompatActivity;
 
 import android.os.Bundle;
 import android.util.Log;
-import android.view.View;
 
 import android.widget.Toast;
 
 import com.example.bravenewcoin.components.Asset;
-import com.example.bravenewcoin.components.AssetListManager;
-import com.example.bravenewcoin.components.MainManager;
-import com.example.bravenewcoin.components.MarketListManager;
+import com.example.bravenewcoin.components.managers.AssetListManager;
+import com.example.bravenewcoin.components.managers.MainManager;
+import com.example.bravenewcoin.components.managers.MarketListManager;
 import com.example.bravenewcoin.components.MyView;
 import com.example.bravenewcoin.components.PopupController;
 import com.example.bravenewcoin.components.TokenBody;

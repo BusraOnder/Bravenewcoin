@@ -1,14 +1,12 @@
-package com.example.bravenewcoin.components;
+package com.example.bravenewcoin.components.managers;
 
 import android.util.Log;
 import android.view.View;
 
 import com.example.bravenewcoin.components.Asset;
 import com.example.bravenewcoin.components.AssetList;
-import com.example.bravenewcoin.components.AssetListManager;
 import com.example.bravenewcoin.components.MarketList;
-import com.example.bravenewcoin.components.MarketListManager;
-import com.example.bravenewcoin.components.adapters.MyAssetAdapter;
+import com.example.bravenewcoin.components.MyView;
 import com.example.bravenewcoin.retrofit.ApiClient;
 import com.example.bravenewcoin.retrofit.RestInterface;
 
