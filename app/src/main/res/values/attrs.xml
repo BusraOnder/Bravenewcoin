@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+	<declare-styleable name="my_view_source">
+		<attr name="_text" format="string"/>
+	</declare-styleable>
+
+</resources>
