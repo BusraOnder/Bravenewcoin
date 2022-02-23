@@ -76,6 +76,7 @@ public class MainManager {
 
 
 	public static void getAssetList(){
+
 		Call<AssetList> call = restInterface.getAssetList("ACTIVE");
 
 		call.enqueue(new Callback<AssetList>() {

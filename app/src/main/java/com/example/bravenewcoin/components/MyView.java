@@ -20,9 +20,11 @@ public class MyView extends RelativeLayout implements View.OnClickListener{
 	public static ProgressBar progressBar;
 	TextView textView;
 	TypedArray attributes;
+	RelativeLayout mainView;
 	String title;
 
 
+	@SuppressLint("CustomViewStyleable")
 	public MyView(Context context, AttributeSet attrs) {
 		super(context,attrs);
 
@@ -33,16 +35,23 @@ public class MyView extends RelativeLayout implements View.OnClickListener{
 			init(title);
 
 		}catch (Exception e){
-
+			Log.i("Exception1",e.getMessage());
 		}
 	}
 
 	private void init(String text){
-		inflate(getContext(),R.layout.my_view,this);
-		textView = (TextView) findViewById(R.id.text);
-		progressBar = (ProgressBar) findViewById(R.id.progress);
-		textView.setText(text);
-		this.setOnClickListener(this);
+		try {
+			inflate(getContext(),R.layout.my_view,this);
+			mainView = (RelativeLayout) findViewById(R.id.mainView);
+			this.setOnClickListener(this);
+
+
+			textView = (TextView) findViewById(R.id.text);
+			textView.setText(text);
+		}catch (Exception e){
+			Log.i("Exception2",e.getMessage());
+		}
+
 
 	}
 
@@ -51,15 +60,20 @@ public class MyView extends RelativeLayout implements View.OnClickListener{
 	@Override
 	public void onClick(View v) {
 
+		progressBar = (ProgressBar) findViewById(R.id.progress);
+		progressBar.setVisibility(VISIBLE);
 		try {
 			progressBar.setVisibility(VISIBLE);
 
+
 			switch (v.getId()){
 				case R.id.assetView:
+					Log.i("ID", "asset");
 					MainActivity.whichList = 1;
 					MainManager.getAssetList();
 					break;
 				case R.id.marketView:
+					Log.i("ID", "market");
 					MainActivity.whichList = 0;
 					MainManager.getMarketList();
 					break;
@@ -69,6 +83,8 @@ public class MyView extends RelativeLayout implements View.OnClickListener{
 		}catch (Exception e){
 			Log.i("onClickExcp",e.getMessage());
 		}
+
+
 
 	}
 

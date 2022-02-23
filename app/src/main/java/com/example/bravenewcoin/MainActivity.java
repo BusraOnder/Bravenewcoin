@@ -6,6 +6,7 @@ import androidx.appcompat.app.AppCompatActivity;
 import android.os.Bundle;
 import android.util.Log;
 
+import android.view.View;
 import android.widget.Toast;
 
 import com.example.bravenewcoin.components.Asset;
@@ -46,7 +47,6 @@ public class MainActivity extends AppCompatActivity {
 
     public static int whichList = 0;
 
-    MyView myViewMarket,myViewAsset;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -59,10 +59,9 @@ public class MainActivity extends AppCompatActivity {
 
         popupController = new PopupController(this);
 
-        myViewAsset = (MyView) findViewById(R.id.assetView);
-        myViewMarket = (MyView) findViewById(R.id.marketView);
 
         listAsset = new ArrayList<Asset>();
+
 
     }
 
